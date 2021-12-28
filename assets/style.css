@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+  }
+
+header {
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+
+}
+
+main {
+ display: flex;
+ 
+}
+
+
+aside {
+    flex: 30%;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.citysidebar {
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border: 1px solid blue;
+}
+
+section {
+    flex: 70%;
+    background-color: darkgoldenrod;
+    padding: 10px;
+}
+
+.cityweather {
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border: 1px solid blue;
+}
+
+.cityforecast { 
+width: 100%;
+padding: 10px;
+height: 200px;
+border: 1px solid blue;
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        background-color: blue;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    
+}
