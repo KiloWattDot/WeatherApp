@@ -25,40 +25,93 @@
         <!-- Aside -->
 
         <aside>
-            <h2> Seach bar here</h2>
+            <!-- Search -->
+            <h3> Seach for cities</h3>
+
             <div class="citysidebar">
-                List of cities
+                <div>
+                    List of cities
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                      <hr>
+                  
+                </div>
+                
+
+                <!-- Select City -->
+                <div class="citysidebar">
+
+                    <div class="submit">
+                        <button type="button" class="btn btn-primary">Austin</button>
+                    </div>
+
+                    <div class="submit">
+                        <button type="button" class="btn btn-primary">Chicago</button>
+                    </div>
+                    <div class="submit">
+                        <button type="button" class="btn btn-primary">New York</button>
+                    </div>
+                    <div class="submit">
+                        <button type="button" class="btn btn-primary">Orlando</button>
+                    </div>
+                    <div class="submit">
+                        <button type="button" class="btn btn-primary">San Francisco</button>
+                    </div>
+                    <div class="submit">
+                        <button type="button" class="btn btn-primary">Seattle</button>
+                    </div>
+                    <div class="submit">
+                        <button type="button" class="btn btn-primary">Denver</button>
+                        
+                    </div>
+
+                    <div class="submit">
+                        <button type="button" class="btn btn-primary">Atlanta</button>
+                    </div>
+
+                   
+                   
+
+                    </div>
+
             </div>
+            
+
         </aside>
 
         <!-- Widget for the Current Day -->
 
         <section>
           
-            <div class="citysidebar">
-                <p>
-                    atlanta
-                </p>
+            <div class="cityweather">
+                <h2 id="city-date">Atlanta (3/30/21)</h2>
+                <p >Temp: <a id="main-temp" href="#"> 74.01 F</a> </p>
+                <p>Wind: <a id="main-wind" href="#"> </a>6.67 MPH </p>
+                <p >Humidity: <a id="main-humidity" href="#">46%</a> </p>
+                <p>UV index: <a id="uv-index" href="#"> .47</a></p>
             </div>
 
             <h2> Current Day Weather </h2>
-            <div class="citysidebar">
-                <div>
+            <div class="cityforecast">
+                <div class="cards">
                     <p> Day1</p>
                 </div>
-                <div>
+
+                <div class="cards">
                     <p> Day2</p>
                 </div>
         
-                <div>
+                <div class="cards">
                     <p> Day3</p>
                 </div>
         
-                <div>
+                <div class="cards">
                     <p> Day4</p>
                 </div>
         
-                <div>
+                <div  class="cards">
                     <p> Day5</p>
                 </div>
         
@@ -70,6 +123,10 @@
 
         
     </main>
+
+    <script>
+        
+    </script>
 
 
 
