@@ -28,24 +28,29 @@ function getWeather() {
 }
 
 
+
+
 ATL_Button.addEventListener('click', function() {
-    fetch('//api.openweathermap.org/data/2.5/weather?q=atlanta&appid=8e04b40f20b6603b082aa92e3bc63978&units=imperial')
+    let lat = 33.740;
+    let lon = 84.3380;
+    fetch('//api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&exclude=hourly,minutely&appid=8e04b40f20b6603b082aa92e3bc63978')
 
     .then(response => response.json()) 
     .then(data => {
 
-        let nameValue = data['name'];
-        var tempValue = data['main']['temp']
-        var humidityValue = data['main']['humidity']
-        var windValue = data['wind']['speed']
-        var descValue = data['weather'][0]['description']
+        
+        // let nameValue = data['name'];
+        var tempValue = data['current']['temp']
+        var humidityValue = data['current']['humidity']
+        // var windValue = data['wind']['speed']
+        var uvi = data['current']['uvi']
 
 
-        cityname.innerHTML = nameValue;
+        // cityname.innerHTML = nameValue;
         temp.innerHTML = tempValue;
         humidity.innerHTML = humidityValue;
-        wind.innerHTML = windValue;
-        uv_index.innerHTML = descValue;
+        // wind.innerHTML = windValue;
+        uv_index.innerHTML = uvi;
         console.log(data)
     })
 
@@ -109,7 +114,6 @@ Sea_Button.addEventListener('click', function() {
 })
 
 
-
 SF_Button.addEventListener('click', function() {
     fetch('//api.openweathermap.org/data/2.5/weather?q=san francisco&appid=8e04b40f20b6603b082aa92e3bc63978&units=imperial')
 
@@ -136,6 +140,8 @@ SF_Button.addEventListener('click', function() {
 
 
 })
+
+
 ORL_Button.addEventListener('click', function() {
     fetch('//api.openweathermap.org/data/2.5/weather?q=orlando&appid=8e04b40f20b6603b082aa92e3bc63978&units=imperial')
 
