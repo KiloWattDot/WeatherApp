@@ -106,10 +106,6 @@ Sea_Button.addEventListener('click', function() {
     })
 
 
-
-    
-
-
 })
 
 
@@ -134,7 +130,6 @@ SF_Button.addEventListener('click', function() {
         uv_index.innerHTML = descValue;
         console.log(data)
     })
-
 
 
     
