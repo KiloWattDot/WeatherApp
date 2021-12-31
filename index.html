@@ -31,7 +31,7 @@
             <div class="citysidebar">
                 <div>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2 inputValue" type="search" placeholder="Search" aria-label="Search">
                         <input class=" button btn btn-outline-success" value="Submit" type="submit"> <br>
                       </form>
                       <hr>
@@ -62,8 +62,7 @@
                         <button type="button" class="btn btn-primary seattle">Seattle</button>
                     </div>
                     <div class="submit">
-                        <button type="button" class="btn btn-primary denver">Denver</button>
-                        
+                        <button type="button" class="btn btn-primary denver">Denver</button>            
                     </div>
 
                     <div class="submit">
@@ -80,18 +79,20 @@
 
         </aside>
 
-        <!-- Widget for the Current Day -->
-
+        
         <section>
-          
+            <!-- Widget for the Current Day -->
             <div class="cityweather">
                 <h2 id="city-date">Atlanta (3/30/21)</h2>
-                <p >Temp: <a id="main-temp" href="#"> 74.01 F</a> </p>
-                <p>Wind: <a id="main-wind" href="#"> </a>6.67 MPH </p>
-                <p >Humidity: <a id="main-humidity" href="#">46%</a> </p>
-                <p>UV index: <a id="uv-index" href="#"> .47</a></p>
+                <p >Temp: <a id="main-temp" > 74.01 F</a> </p>
+                <p>Wind: <a id="main-wind" > </a>6.67 MPH </p>
+                <p >Humidity: <a id="main-humidity">46%</a> </p>
+                <p>UV index: <a id="uv-index" > .47</a></p>
             </div>
 
+
+
+            <!-- FORECAST CARDS FOR THE WEEK -->
             <h2> Forecast </h2>
             <div class="cityforecast">
                 <section class="card">
@@ -143,9 +144,7 @@
         
     </main>
 
-    <script>
-        
-    </script>
+    <script src="assets/logic.js"> </script>
 
 
 
