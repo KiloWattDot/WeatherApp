@@ -2,26 +2,26 @@
   
   
   ## Description
-  This is an application that you can use to find the weather anywhere around the world. You can also check ot some of the other parameters that are affecting the temperature along with getting the forecast for the rest of the week. This is helpful if you want to quickly access information about a city you may be visiting and it's weather conditions.
+  This is an application that you can use to find the weather anywhere around the world. In this application, the API used to gather the data comes from OpenWeatherMap.org. The specific API's used from the site are the "CurrentWeather API" and the "OneCall API". You can also check ot some of the other parameters that are affecting the temperature along with getting the forecast for the rest of the week. This is helpful if you want to quickly access information about a city you may be visiting and it's weather conditions.
 
   ## Table of Contents
-  -[ Description](#description)
+  [ Description](#description)
 
-  -[ Installation](#installation)
+  [ Installation](#installation)
 
-  -[ Usage](#usage)
+  [ Usage](#usage)
 
+  [ Contributing](#contributing)
 
-  -[ Contributing](#contributing)
+  [ Tests](#tests)
 
-  -[ Tests](#tests)
-
-  -[ Questions](#questions)
+  [ Questions](#questions)
 
   ## Installation
   Moments is an dependency used to format the date data from the api's forecast information.
 
   ## Usage
+ <img src="2022-01-03_16h33_13.png">
 
 
 

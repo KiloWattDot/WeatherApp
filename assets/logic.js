@@ -307,7 +307,7 @@ ATL_Button.addEventListener('click', function() {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block';
+        uv_index_color.display = 'block'; 
         
         
         

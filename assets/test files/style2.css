@@ -9,6 +9,11 @@ body {
 
 }
 
+h3 {
+    font-family: poppins;
+    font-weight: bold;
+}
+
 .input {
     text-align: center;
     margin: 100px 0;

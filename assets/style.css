@@ -21,6 +21,17 @@ main {
  
 }
 
+.cardTitle {
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.cardInfo {
+    font-weight: bold;
+}
+
 
 aside {
     flex: 30%;
@@ -57,14 +68,15 @@ button {
 
 section {
     flex: 70%;
-    background-color: darkgoldenrod;
+    background-color: rgb(255, 251, 241);
     padding: 10px;
 }
 
 .cityweather {
     width: 100%;
     padding: 10px;
-    height: 200px;
+    margin: 10px;
+    height: 220px;
     border: 1px solid blue;
 }
 
@@ -101,6 +113,7 @@ section {
 width: 100%;
 padding: 10px;
 height: 500px;
+align-content: center;
 border: 1px solid blue;
 }
 
@@ -108,7 +121,7 @@ border: 1px solid blue;
     border-style: solid;
     border-width: 1px;
 
-    margin: 10px;
+    margin: 10px 10px;
     float: left;
     width: 17%;
     height: 300px;

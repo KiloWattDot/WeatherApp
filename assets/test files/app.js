@@ -6,10 +6,11 @@ var desc = document.querySelector('.desc')
 var temp = document.querySelector('.temp')
 let uv_index = document.querySelector('.uv-index')
 let uv_index_color = document.getElementById('#uvIndexColor')
- 
+let w_icons = document.querySelector('w-icons')
 
 let lat = {};
 let lon = {};
+let imglink = {};
 
 // let location;
 
@@ -42,14 +43,16 @@ button.addEventListener('click', function() {
     .then(response => response.json()) 
     .then(data => {
 
-       
+        // let w_icons_Value = data['current']['weather'][0]['icon']
         let uv_index_Value = data['current']['uvi']
 
-        // let nameValue = data['name'];
-        // var tempValue = data['main']['temp']
-        // var descValue = data['weather'][0]['description']
+    
+        console.log(data)
 
-        uv_index.innerHTML = uv_index_Value;
+         
+
+
+            uv_index.innerHTML = uv_index_Value;
         
             if (uv_index_Value <= 3.0) {
                 uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
@@ -66,6 +69,7 @@ button.addEventListener('click', function() {
          
         })
 
+      
     
 
         // console.log(data['current']['uvi'])
