@@ -108,6 +108,7 @@ searchButton.addEventListener('submit', function(e) {
     .then(data => {
 
         let uv_index_Value = data['current']['uvi']
+        let current_date_Value = moment(data['current']['dt'] * 1000).format('L')
         
      
         card1_date_Value = moment(data['daily'][0]['dt'] * 1000).format('dddd')
@@ -146,7 +147,9 @@ searchButton.addEventListener('submit', function(e) {
         
 
         // if (uv_index_Value > )
+        current_date.innerHTML = current_date_Value;
 
+        
         card1_date.innerHTML = card1_date_Value;    
         card1_temp.innerHTML = card1_temp_Value;
         card1_wind.innerHTML = card1_wind_Value;
@@ -172,6 +175,13 @@ searchButton.addEventListener('submit', function(e) {
         card5_temp.innerHTML = card5_temp_Value;
         card5_wind.innerHTML = card5_wind_Value;
         card5_humidity.innerHTML = card5_humidity_Value;
+
+        console.log(data['current']['uvi'])
+        console.log(data['daily'][0]['temp']['day'])
+        console.log(current_date_Value)
+        console.log(card1_date_Value)
+        console.log(data)
+
         
         uv_index.innerHTML = uv_index_Value;
         if (uv_index_Value <= 3.0) {
@@ -183,24 +193,20 @@ searchButton.addEventListener('submit', function(e) {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block';
-        })
+        //  // uv_index_color.display = 'block'
+        
+     
      
         
         
 
 
-        console.log(data['current']['uvi'])
-        console.log(data['daily'][0]['temp']['day'])
-        console.log(card1_date_Value)
-        console.log(data)
 
 
         
     })
 
-
-
+})
 
 
 // City Buttons
@@ -237,6 +243,7 @@ ATL_Button.addEventListener('click', function() {
     .then(data => {
 
         let uv_index_Value = data['current']['uvi']
+        let current_date_Value = moment(data['current']['dt'] * 1000).format('L')
         
         card1_date_Value = moment(data['daily'][0]['dt'] * 1000).format('dddd')
         card1_temp_Value = data['daily'][0]['temp']['day']
@@ -269,6 +276,7 @@ ATL_Button.addEventListener('click', function() {
 
 
         // if (uv_index_Value > )
+        current_date.innerHTML = current_date_Value;
 
         card1_date.innerHTML = card1_date_Value;    
         card1_temp.innerHTML = card1_temp_Value;
@@ -307,7 +315,7 @@ ATL_Button.addEventListener('click', function() {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block'; 
+         // uv_index_color.display = 'block' 
         
         
         
@@ -359,6 +367,7 @@ Den_Button.addEventListener('click', function() {
     .then(data => {
 
         let uv_index_Value = data['current']['uvi']
+        let current_date_Value = moment(data['current']['dt'] * 1000).format('L')
         
         card1_date_Value = moment(data['daily'][0]['dt'] * 1000).format('dddd')
         card1_temp_Value = data['daily'][0]['temp']['day']
@@ -391,6 +400,7 @@ Den_Button.addEventListener('click', function() {
 
 
         // if (uv_index_Value > )
+        current_date.innerHTML = current_date_Value;
 
         card1_date.innerHTML = card1_date_Value;    
         card1_temp.innerHTML = card1_temp_Value;
@@ -429,7 +439,7 @@ Den_Button.addEventListener('click', function() {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block';
+         // uv_index_color.display = 'block'
         
         
 
@@ -479,6 +489,7 @@ Sea_Button.addEventListener('click', function() {
     .then(data => {
 
         let uv_index_Value = data['current']['uvi']
+        let current_date_Value = moment(data['current']['dt'] * 1000).format('L')
         
         card1_date_Value = moment(data['daily'][0]['dt'] * 1000).format('dddd')
         card1_temp_Value = data['daily'][0]['temp']['day']
@@ -512,6 +523,7 @@ Sea_Button.addEventListener('click', function() {
 
 
         // if (uv_index_Value > )
+        current_date.innerHTML = current_date_Value;
 
         card1_date.innerHTML = card1_date_Value;    
         card1_temp.innerHTML = card1_temp_Value;
@@ -552,7 +564,7 @@ Sea_Button.addEventListener('click', function() {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block';
+         // uv_index_color.display = 'block'
         
 
         console.log(data['current']['uvi'])
@@ -603,6 +615,8 @@ SF_Button.addEventListener('click', function() {
     .then(data => {
 
         let uv_index_Value = data['current']['uvi']
+        let current_date_Value = moment(data['current']['dt'] * 1000).format('L')
+
         card1_date_Value = moment(data['daily'][0]['dt'] * 1000).format('dddd')
         card1_temp_Value = data['daily'][0]['temp']['day']
         card1_wind_Value = data['daily'][0]['wind_speed']
@@ -636,6 +650,7 @@ SF_Button.addEventListener('click', function() {
      
 
         // if (uv_index_Value > )
+        current_date.innerHTML = current_date_Value;
 
         card1_date.innerHTML = card1_date_Value;    
         card1_temp.innerHTML = card1_temp_Value;
@@ -674,7 +689,7 @@ SF_Button.addEventListener('click', function() {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block';
+         // uv_index_color.display = 'block'
         
         
 
@@ -727,7 +742,8 @@ ORL_Button.addEventListener('click', function() {
     .then(data => {
 
         let uv_index_Value = data['current']['uvi']
-        
+          let current_date_Value = moment(data['current']['dt'] * 1000).format('L')
+
         card1_date_Value = moment(data['daily'][0]['dt'] * 1000).format('dddd')
         card1_temp_Value = data['daily'][0]['temp']['day']
         card1_wind_Value = data['daily'][0]['wind_speed']
@@ -760,6 +776,7 @@ ORL_Button.addEventListener('click', function() {
 
 
         // if (uv_index_Value > )
+        current_date.innerHTML = current_date_Value;
 
         card1_date.innerHTML = card1_date_Value;    
         card1_temp.innerHTML = card1_temp_Value;
@@ -799,7 +816,7 @@ ORL_Button.addEventListener('click', function() {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block';
+         // uv_index_color.display = 'block'
         
 
 
@@ -849,6 +866,7 @@ NY_Button.addEventListener('click', function() {
     .then(data => {
 
         let uv_index_Value = data['current']['uvi']
+        let current_date_Value = moment(data['current']['dt'] * 1000).format('L')
         
         card1_date_Value = moment(data['daily'][0]['dt'] * 1000).format('dddd')
         card1_temp_Value = data['daily'][0]['temp']['day']
@@ -883,6 +901,7 @@ NY_Button.addEventListener('click', function() {
       
 
         // if (uv_index_Value > )
+        current_date.innerHTML = current_date_Value;
 
         card1_date.innerHTML = card1_date_Value;    
         card1_temp.innerHTML = card1_temp_Value;
@@ -922,7 +941,7 @@ NY_Button.addEventListener('click', function() {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block';
+         // uv_index_color.display = 'block'
         
 
 
@@ -973,6 +992,7 @@ Chi_Button.addEventListener('click', function() {
     .then(data => {
 
         let uv_index_Value = data['current']['uvi']
+        let current_date_Value = moment(data['current']['dt'] * 1000).format('L')
         
         card1_date_Value = moment(data['daily'][0]['dt'] * 1000).format('dddd')
         card1_temp_Value = data['daily'][0]['temp']['day']
@@ -1007,6 +1027,7 @@ Chi_Button.addEventListener('click', function() {
         
 
         // if (uv_index_Value > )
+        current_date.innerHTML = current_date_Value;
 
         card1_date.innerHTML = card1_date_Value;    
         card1_temp.innerHTML = card1_temp_Value;
@@ -1045,7 +1066,7 @@ Chi_Button.addEventListener('click', function() {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block';
+         // uv_index_color.display = 'block'
         
         
         
@@ -1097,6 +1118,7 @@ Aus_Button.addEventListener('click', function() {
     .then(data => {
 
         let uv_index_Value = data['current']['uvi']
+        let current_date_Value = moment(data['current']['dt'] * 1000).format('L')
         
         card1_date_Value = moment(data['daily'][0]['dt'] * 1000).format('dddd')
         card1_temp_Value = data['daily'][0]['temp']['day']
@@ -1131,6 +1153,7 @@ Aus_Button.addEventListener('click', function() {
         
 
         // if (uv_index_Value > )
+        current_date.innerHTML = current_date_Value;
 
         card1_date.innerHTML = card1_date_Value;    
         card1_temp.innerHTML = card1_temp_Value;
@@ -1169,7 +1192,7 @@ Aus_Button.addEventListener('click', function() {
         } else {
             uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
         }   //display uv color
-        uv_index_color.display = 'block';
+         // uv_index_color.display = 'block'
         
         
         
@@ -1185,9 +1208,7 @@ Aus_Button.addEventListener('click', function() {
     })
 
 
-
 })
-
 
 
 
