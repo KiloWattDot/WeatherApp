@@ -5,6 +5,7 @@ let cityname = document.querySelector('.name')
 var desc = document.querySelector('.desc')
 var temp = document.querySelector('.temp')
 let uv_index = document.querySelector('.uv-index')
+let uv_index_color = document.getElementById('#uvIndexColor')
  
 
 let lat = {};
@@ -49,19 +50,36 @@ button.addEventListener('click', function() {
         // var descValue = data['weather'][0]['description']
 
         uv_index.innerHTML = uv_index_Value;
+        
+            if (uv_index_Value <= 3.0) {
+                uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+            } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+                uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+            } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+                uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+            } else {
+                uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+            }
+        
+          //display uv color
+          uv_index_color.display = 'block';
+         
+        })
 
     
 
-        console.log(data['current']['uvi'])
-        console.log(data)
+        // console.log(data['current']['uvi'])
+        
         // cityname.innerHTML = nameValue;
         // temp.innerHTML = tempValue;
         // desc.innerHTML = descValue;
         
-
+        .catch(err => alert("wrong city name!"))
 
     })
 
-    .catch(err => alert("wrong city name!"))
-})
+
+
+
+
 

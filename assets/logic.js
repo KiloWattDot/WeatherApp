@@ -28,6 +28,7 @@ var humidity = document.querySelector('#main-humidity')
 
 // 2nd Fetch (OneCall API)
 var uv_index = document.querySelector('#uv-index')
+let uv_index_color = document.getElementById('#uvIndexColor')
 
 // Forecast 
     // Card1
@@ -139,7 +140,10 @@ searchButton.addEventListener('submit', function(e) {
 
 
 
-        uv_index.innerHTML = uv_index_Value;
+      
+    
+
+        
 
         // if (uv_index_Value > )
 
@@ -169,6 +173,19 @@ searchButton.addEventListener('submit', function(e) {
         card5_wind.innerHTML = card5_wind_Value;
         card5_humidity.innerHTML = card5_humidity_Value;
         
+        uv_index.innerHTML = uv_index_Value;
+        if (uv_index_Value <= 3.0) {
+            uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+        } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+            uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+        } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+            uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+        } else {
+            uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+        }   //display uv color
+        uv_index_color.display = 'block';
+        })
+     
         
         
 
@@ -182,7 +199,6 @@ searchButton.addEventListener('submit', function(e) {
         
     })
 
-})
 
 
 
@@ -252,8 +268,6 @@ ATL_Button.addEventListener('click', function() {
 
 
 
-        uv_index.innerHTML = uv_index_Value;
-
         // if (uv_index_Value > )
 
         card1_date.innerHTML = card1_date_Value;    
@@ -281,6 +295,19 @@ ATL_Button.addEventListener('click', function() {
         card5_temp.innerHTML = card5_temp_Value;
         card5_wind.innerHTML = card5_wind_Value;
         card5_humidity.innerHTML = card5_humidity_Value;
+        
+                
+        uv_index.innerHTML = uv_index_Value;
+        if (uv_index_Value <= 3.0) {
+            uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+        } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+            uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+        } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+            uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+        } else {
+            uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+        }   //display uv color
+        uv_index_color.display = 'block';
         
         
         
@@ -363,8 +390,6 @@ Den_Button.addEventListener('click', function() {
 
 
 
-        uv_index.innerHTML = uv_index_Value;
-
         // if (uv_index_Value > )
 
         card1_date.innerHTML = card1_date_Value;    
@@ -393,6 +418,18 @@ Den_Button.addEventListener('click', function() {
         card5_wind.innerHTML = card5_wind_Value;
         card5_humidity.innerHTML = card5_humidity_Value;
         
+                
+        uv_index.innerHTML = uv_index_Value;
+        if (uv_index_Value <= 3.0) {
+            uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+        } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+            uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+        } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+            uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+        } else {
+            uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+        }   //display uv color
+        uv_index_color.display = 'block';
         
         
 
@@ -473,7 +510,6 @@ Sea_Button.addEventListener('click', function() {
 
 
 
-        uv_index.innerHTML = uv_index_Value;
 
         // if (uv_index_Value > )
 
@@ -505,7 +541,19 @@ Sea_Button.addEventListener('click', function() {
         
         
         
-
+        
+        uv_index.innerHTML = uv_index_Value;
+        if (uv_index_Value <= 3.0) {
+            uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+        } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+            uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+        } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+            uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+        } else {
+            uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+        }   //display uv color
+        uv_index_color.display = 'block';
+        
 
         console.log(data['current']['uvi'])
         console.log(data['daily'][0]['temp']['day'])
@@ -585,7 +633,7 @@ SF_Button.addEventListener('click', function() {
 
 
 
-        uv_index.innerHTML = uv_index_Value;
+     
 
         // if (uv_index_Value > )
 
@@ -615,6 +663,18 @@ SF_Button.addEventListener('click', function() {
         card5_wind.innerHTML = card5_wind_Value;
         card5_humidity.innerHTML = card5_humidity_Value;
         
+           
+        uv_index.innerHTML = uv_index_Value;
+        if (uv_index_Value <= 3.0) {
+            uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+        } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+            uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+        } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+            uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+        } else {
+            uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+        }   //display uv color
+        uv_index_color.display = 'block';
         
         
 
@@ -698,7 +758,6 @@ ORL_Button.addEventListener('click', function() {
 
 
 
-        uv_index.innerHTML = uv_index_Value;
 
         // if (uv_index_Value > )
 
@@ -729,6 +788,18 @@ ORL_Button.addEventListener('click', function() {
         card5_humidity.innerHTML = card5_humidity_Value;
         
         
+           
+        uv_index.innerHTML = uv_index_Value;
+        if (uv_index_Value <= 3.0) {
+            uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+        } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+            uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+        } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+            uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+        } else {
+            uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+        }   //display uv color
+        uv_index_color.display = 'block';
         
 
 
@@ -809,7 +880,7 @@ NY_Button.addEventListener('click', function() {
 
 
 
-        uv_index.innerHTML = uv_index_Value;
+      
 
         // if (uv_index_Value > )
 
@@ -840,6 +911,18 @@ NY_Button.addEventListener('click', function() {
         card5_humidity.innerHTML = card5_humidity_Value;
         
         
+           
+        uv_index.innerHTML = uv_index_Value;
+        if (uv_index_Value <= 3.0) {
+            uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+        } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+            uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+        } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+            uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+        } else {
+            uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+        }   //display uv color
+        uv_index_color.display = 'block';
         
 
 
@@ -921,7 +1004,7 @@ Chi_Button.addEventListener('click', function() {
 
 
 
-        uv_index.innerHTML = uv_index_Value;
+        
 
         // if (uv_index_Value > )
 
@@ -950,6 +1033,19 @@ Chi_Button.addEventListener('click', function() {
         card5_temp.innerHTML = card5_temp_Value;
         card5_wind.innerHTML = card5_wind_Value;
         card5_humidity.innerHTML = card5_humidity_Value;
+        
+           
+        uv_index.innerHTML = uv_index_Value;
+        if (uv_index_Value <= 3.0) {
+            uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+        } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+            uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+        } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+            uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+        } else {
+            uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+        }   //display uv color
+        uv_index_color.display = 'block';
         
         
         
@@ -1032,7 +1128,7 @@ Aus_Button.addEventListener('click', function() {
 
 
 
-        uv_index.innerHTML = uv_index_Value;
+        
 
         // if (uv_index_Value > )
 
@@ -1062,6 +1158,19 @@ Aus_Button.addEventListener('click', function() {
         card5_wind.innerHTML = card5_wind_Value;
         card5_humidity.innerHTML = card5_humidity_Value;
         
+           
+        uv_index.innerHTML = uv_index_Value;
+        if (uv_index_Value <= 3.0) {
+            uv_index.style.backgroundColor = 'green'; uv_index.style.color = 'white';
+        } else if (uv_index_Value <= 7.0 && uv_index_Value > 3.0) {
+            uv_index.style.backgroundColor = 'yellow'; uv_index.style.color = 'black';
+        } else if (uv_index_Value <= 10.0 && uv_index_Value > 7.0) {
+            uv_index.style.backgroundColor = 'red'; uv_index.style.color = 'black';
+        } else {
+            uv_index.style.backgroundColor = 'purple'; uv_index.style.color = 'white';
+        }   //display uv color
+        uv_index_color.display = 'block';
+        
         
         
 
@@ -1081,3 +1190,27 @@ Aus_Button.addEventListener('click', function() {
 
 
 
+
+// var search = document.querySelector('form');
+// ["click", "keypress"].forEach(ev=>{
+//   search.addEventListener(ev, function(e){
+//      if(ev=="click"){
+//        console.log("click");//clicked
+//        getWeather();
+//      }
+//      if(e.keyCode==13){
+//       console.log("click");//enter key pressed
+//       getWeather();
+//      }
+//   });
+// });
+
+// function getWeather() {
+//     fetch('//api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=8e04b40f20b6603b082aa92e3bc63978&units=imperial')
+
+//     .then(response => response.json()) 
+//     .then(data => console.log(data))
+    
+
+//     .catch(err => alert('Wrong city name!'))
+// }
