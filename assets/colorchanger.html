@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="elementId" onclick="fn_name()">
+    
+    </div>
+
+    <input name="ColorPickerId" type="color" id="ColorPickerName" />   
+
+    <script>
+        document.getElementById("elementID").style.Color =   document.getElementById("ColorPickerId").value;
+
+
+    var changeColor = function(obj) {
+
+            if (obj.value < 6) {
+                obj.style.backgroundColor = 'green';
+            } else if (obj.value >= 6 && obj.value <= 9) {
+                obj.style.backgroundColor = 'orange';
+            } else if (obj.value > 9) {
+                obj.style.backgroundColor = 'red';
+            }
+
+};
+    </script>
+    
+</body>
+</html>
