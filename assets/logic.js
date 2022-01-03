@@ -97,10 +97,15 @@ searchButton.addEventListener('submit', function(e) {
         console.log(data)
         // console.log(window.moment(day.dt*1000).format('ddd'))
 
+        
 
         return fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&exclude=hourly,minutely&appid=8e04b40f20b6603b082aa92e3bc63978&units=imperial')
+        
 
     })
+
+    
+
 
 
 
@@ -205,7 +210,9 @@ searchButton.addEventListener('submit', function(e) {
 
         
     })
+    .catch(err => alert("wrong city name!"))
 
+    
 })
 
 
